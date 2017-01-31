@@ -196,8 +196,8 @@ window.playChord = function(analyser, chord) {
     var oscillator = audioCtx.createOscillator();
     oscillator.type = 'sine';
     oscillator.frequency.value = toneFrequencies[tone];
-    oscillator.start(i);
-    oscillator.stop(chord.length + 3);
+    oscillator.start(audioCtx.currentTime + i);
+    oscillator.stop(audioCtx.currentTime + chord.length + 3);
     oscillator.connect(gainNode);
     i += 1;
   }
@@ -294,8 +294,8 @@ window.playArpeggio = function(analyser, notes) {
     var oscillator = audioCtx.createOscillator();
     oscillator.type = 'sine';
     oscillator.frequency.value = toneFrequencies[tone];
-    oscillator.start(i * 0.2);
-    oscillator.stop((i + 0.95) * 0.2);
+    oscillator.start(audioCtx.currentTime + i * 0.2);
+    oscillator.stop(audioCtx.currentTime + (i + 0.95) * 0.2);
     oscillator.connect(gainNode);
     i += 1;
   }

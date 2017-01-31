@@ -12,28 +12,13 @@
     <div class="wrapper">
       <header><h1>What chord?</h1></header>
       <canvas class="visualizer" width="640" height="100"></canvas>
-      <div class="keyboard top-half">
-        <div class="key white c-key"></div>
-        <div class="key black db-key"></div>
-        <div class="key white d-key"></div>
-        <div class="key black eb-key"></div>
-        <div class="key white e-key"></div>
-        <div class="key white f-key"></div>
-        <div class="key black gb-key"></div>
-        <div class="key white g-key"></div>
-        <div class="key black ab-key"></div>
-        <div class="key white a-key"></div>
-        <div class="key black bb-key"></div>
-        <div class="key white b-key"></div>
-      </div>
-      <div class="keyboard bottom-half">
-        <div class="key white c-key"></div>
-        <div class="key white d-key"></div>
-        <div class="key white e-key"></div>
-        <div class="key white f-key"></div>
-        <div class="key white g-key"></div>
-        <div class="key white a-key"></div>
-        <div class="key white b-key"></div>
+      <div style='margin-top: 20px;'>
+        <button class='a440'>A (440Hz)</button>
+        <button class='a880'>A (880Hz)</button>
+        <button class='scale'> Cmaj scale</button>
+        <button class='ebmin7'>Eb minor 7</button>
+        <button class='cmaj7'>C maj 7</button>
+        <button class='bb7'>Bb 7</button>
       </div>
     </div>
     <script src="./chords.js"></script>
