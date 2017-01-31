@@ -1,6 +1,7 @@
 # Playing with WebAudio
 
+- [Motivation](motivation.html)
 - [Open Mic](openmic.html)
-- [Pure Sine Waves](sine.html)
+- [Pure Tones](sine.html)
 - [Piano Tones](piano.html)
-- [Chords Recognition](chords.html)
+- [Chord Recognition](chords.html)

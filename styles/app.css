@@ -209,7 +209,7 @@ a:hover, a:focus {
 .keyboard {
   margin: 0;
   padding: 0;
-  padding-left: 50px;
+  padding-left: 170px;
 }
 
 .keyboard.top-half {
@@ -258,3 +258,17 @@ a:hover, a:focus {
 .keyboard.bottom-half .f-key { margin-left: 1px; }
 
 .key.played { background-color: #ffaaaa; }
+
+.navigation span {
+  font-size: 12pt;
+  position: absolute;
+  padding: 10px;
+}
+
+.navigation .prev { left: 0; }
+.navigation .next { right: 0; }
+
+img {
+  padding: 10px;
+  height: 450px;
+}
