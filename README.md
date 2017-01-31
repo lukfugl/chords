@@ -5,3 +5,5 @@
 - [Pure Tones](sine.html)
 - [Piano Tones](piano.html)
 - [Chord Recognition](chords.html)
+
+[See the Source](https://github.com/lukfugl/chords/)
