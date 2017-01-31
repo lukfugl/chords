@@ -101,7 +101,7 @@ function draw() {
 }
 draw();
 
-function playSample(analyser, sample) {
+window.playSample = function(analyser, sample) {
   loadSample(sample, function(source) {
     analyser.disconnect();
     source.connect(analyser);
@@ -110,7 +110,7 @@ function playSample(analyser, sample) {
   });
 }
 
-function playSineChord(analyser, chord) {
+window.playChord = function(analyser, chord) {
   analyser.disconnect();
   analyser.minDecibels = -60;
   analyser.maxDecibels = -0;
@@ -206,7 +206,7 @@ function playSineChord(analyser, chord) {
   analyser.connect(audioCtx.destination);
 }
 
-function playArpeggio(analyser, notes) {
+window.playArpeggio = function(analyser, notes) {
   analyser.disconnect();
   analyser.minDecibels = -60;
   analyser.maxDecibels = -0;
@@ -304,7 +304,7 @@ function playArpeggio(analyser, notes) {
   analyser.connect(audioCtx.destination);
 }
 
-function analyseMic(analyser) {
+window.analyseMic = function(analyser) {
   navigator.getUserMedia(
     { audio: true },
     function(stream) {
@@ -317,12 +317,3 @@ function analyseMic(analyser) {
     function(err) { throw new Error('The following gUM error occured: ' + err); }
   );
 }
-
-//playSample(analyser, 'bb7');
-//playSineChord(analyser, [ 'eb4', 'bb4', 'db5', 'gb5' ]);
-//playArpeggio(analyser, [
-//  'c3', 'd3', 'e3', 'f3', 'g3', 'a3', 'b3',
-//  'c4', 'd4', 'e4', 'f4', 'g4', 'a4', 'b4',
-//  'c5', 'd5', 'e5', 'f5', 'g5', 'a5', 'b5', 'c6'
-//]);
-analyseMic(analyser);

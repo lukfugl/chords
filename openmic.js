@@ -1,0 +1,1 @@
+window.analyseMic(analyser);
